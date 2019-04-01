@@ -1,30 +1,23 @@
 var dundieArray = ["Pam Beesley", "Michael Scott", "Jim Halpert", "Dwight Schrute", "Angela Martin", "Erin Hannon", "Phyllis Vance", "Toby Flenderson", "Kevin Malone", "Oscar Martinez", "Andy Bernard", "Ryan Howard", "Jan Levinson", "Stanley Hudson", "Robert California", "Creed Bratton", "Darryl Philbin", "Kelly Kapoor", "Holly Flax", "Meredith Palmer"];
 
-$(document).ready(function() {
+$(document).ready(function () {
     for (var i = 0; i < dundieArray.length; i++) {
         $("#dundie-buttons").append("<button type='button' onclick='searchGif(\"" + dundieArray[i] + "\")' class='btn btn-primary' value=' " + dundieArray[i] + "'> " + dundieArray[i] + " </button>");
     }
 });
 
-function dundieButtonClicked() {
+
+function submitButtonClicked() {
     var userInput = $('#dundie-input').val();
     searchGif(userInput);
 }
 
-function submitButtonClicked() {
-    var userInput = $('#dundie-input').val();
-
-    if (userInput) {
-        $('#dundie-buttons').append("<button type='button' onclick='searchGif(\"" + userInput + "\")' class='btn btn-primary' value=' " + userInput + "'> " + userInput + " </button>");
-    }
-}
-
 function searchGif(gifName) {
     $.ajax({
-            url: 'https://api.giphy.com/v1/gifs/search?q= ' + gifName + ' &api_key=Z8uZ3fAZ8cHzULQyfZwp43QCl9PmXrLl',
-            type: 'GET',
-        })
-        .done(function(response) {
+        url: 'https://api.giphy.com/v1/gifs/search?q= ' + gifName + ' &api_key=Z8uZ3fAZ8cHzULQyfZwp43QCl9PmXrLl',
+        type: 'GET',
+    })
+        .done(function (response) {
             displayGif(response);
         })
 }
@@ -41,7 +34,7 @@ function displayGif(response) {
         $('#dundie').append(image);
     }
 
-    $('.movImage').on('click', function() {
+    $('.movImage').on('click', function () {
         var state = $(this).attr('data-state');
         if (state == 'still') {
             $(this).attr('src', $(this).attr("data-animate"));
