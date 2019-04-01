@@ -1,0 +1,189 @@
+body {
+	overflow-x: hidden;
+	color: white;
+	font-family: Oswald;
+	background-image: url("..//images/false2.jpg");
+}
+
+/*--- Nav Scrolling Offset --*/
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+	color: rgba(75, 34, 34, 0.534);
+}
+.offset:before {
+	height: 62px;
+	margin-top: -62px;
+	content: "";
+	display: block;
+}
+
+/*--- Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+	padding: 1rem;
+}
+/*Header*/
+.fixed-top  {
+	-webkit-backface-visibility: hidden;
+   }
+   
+   .home-wrap {
+	 clip: rect(0, auto, auto, 0);
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+   }
+   .home-inner {
+	 position: fixed;
+	 display: table;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 background-size: cover;
+	 background-position: center center;
+	 -webkit-transform: translateZ(0);
+			 transform: translateZ(0);
+	 will-change: transform;
+   }
+
+.home-inner {
+	background-image: url("..//images/dwight.jpg");
+}
+.caption {
+	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	top: 40%;
+	z-index: 1;
+}
+.caption h3 {
+	color: whitesmoke;
+	font-size: 6.4rem;
+	font-family: "Love Ya Like A Sister", cursive;
+	text-transform: uppercase;
+	padding-bottom: 2rem;
+}
+/* Nav */
+.nav-link {
+	color:white;
+	font-family: Oswald, sans-serif;
+	font-size:1em;
+}
+.btn {
+	border-width: medium;
+	border-radius: 0;
+	color: whitesmoke;
+	font-family: "Love Ya Like A Sister", cursive;
+	background-color: red;
+	padding: .5rem 1.1rem;
+	font-size: 4.9rem;
+	text-transform: uppercase;
+}
+.header {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: table;
+	background: #E9ECEF;
+	z-index: -1;
+  }
+/*Main Section*/
+#add {
+	font-family: Oswald;
+	font-size: 20px;
+	color: #333;
+}
+
+.narrow {
+	width: 85%;
+	margin: 0 auto;
+	padding-top: 1rem;
+}
+h3.heading {
+	font-size: 1.9rem;
+	font-family: "Love Ya Like A Sister", cursive;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 1.9rem;
+}
+.heading-underline {
+	width: 3rem;
+	height: .2rem;
+	background-color:white;
+	margin: 0 auto 2rem;
+}
+
+p {
+	font-family: Oswald;
+	font-size: 20px;
+	color: #333;
+}
+/*    BUTTONS   */
+
+#dundie-buttons {
+	font-family: "Love Ya Like A Sister", cursive;
+	
+}
+button.btn.btn-primary {
+	color: #fff;
+	background-color: rgba(75, 34, 34, 0.534);
+	border-color: rgba(75, 34, 34, 0.945);
+	margin: 5px;
+}
+button.btn.btn-success {
+	color: white;
+	background-color: red;
+	border-color: rgba(75, 34, 34, 0.945);
+}
+
+.ratings {
+	color: rgb(97, 29, 29);
+	font-family: Oswald, sans-serif;
+	font-size: 30px;
+	font-weight: 4px;
+}
+/*Footer section*/
+
+.footer .row {
+	background-color: transparent;
+	padding: 1rem 2rem 3rem;
+	color: white;
+}
+.footer a {
+	color: white;
+}
+
+input.btn {
+	cursor: pointer;
+	
+}
+hr.socket {
+	width: 100%;
+	border-top: .2rem solid white;
+}
+
+/* info for Tanya's media queries for container's col and rows:
+XS equals less than  576px;
+SM equals between 576px and 768px;
+MD equals between 768px and 992 px;
+LG is between 992 px and 1200px;
+XL is above 1200px;
+*/
+@media (max-width: 992px) {
+	.navbar {
+		height: auto;
+	}
+}
+@media (max-width: 768px) {
+	.caption {
+		top: 35%;
+	}
+	.caption h3 {
+		font-size: 10rem;
+		font-family: "Love Ya Like A Sister", cursive;
+		padding-bottom: 1.2rem;
+	}
+}
